@@ -11,7 +11,7 @@ class BugsnagService {
 
     def grailsApplication
 //    def exceptionHandler
-//    def grailsResourceLocator
+    def grailsResourceLocator
 
     def addMetadata = null
 
