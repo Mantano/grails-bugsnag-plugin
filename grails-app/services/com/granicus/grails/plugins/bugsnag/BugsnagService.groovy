@@ -10,7 +10,7 @@ import org.codehaus.groovy.grails.web.context.ServletContextHolder as SCH
 class BugsnagService {
 
     def grailsApplication
-    def exceptionHandler
+//    def exceptionHandler
     def grailsResourceLocator
 
     def addMetadata = null
