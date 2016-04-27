@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 import org.apache.log4j.Logger
-import org.codehaus.groovy.grails.web.errors.GrailsExceptionResolver
+import org.grails.web.errors.GrailsExceptionResolver
 import org.springframework.web.servlet.ModelAndView
 
 class BugsnagExceptionResolver extends GrailsExceptionResolver {

@@ -5,13 +5,13 @@ import grails.util.Environment
 import com.bugsnag.Client
 import com.bugsnag.MetaData
 
-import org.codehaus.groovy.grails.web.context.ServletContextHolder as SCH
+import grails.web.context.ServletContextHolder as SCH
+
+import javax.servlet.http.HttpServletRequest
 
 class BugsnagService {
 
     def grailsApplication
-//    def exceptionHandler
-    def grailsResourceLocator
 
     def addMetadata = null
 
@@ -58,7 +58,7 @@ class BugsnagService {
       return client
     }
 
-    def notify(request, exception, extraMetaData = [:]) {
+    def notify(HttpServletRequest request, Exception exception, Map extraMetaData = [:]) {
 
         def client = getConfiguredClient(request.requestURI)
 
