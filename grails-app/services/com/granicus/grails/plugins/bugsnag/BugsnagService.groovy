@@ -73,7 +73,7 @@ class BugsnagService {
             metaData.addToTab( "environment", "java vendor", System.getProperty("java.vendor") )
             metaData.addToTab( "environment", "os name", System.getProperty("os.name") )
             metaData.addToTab( "environment", "os version", System.getProperty("os.version") )
-            metaData.addToTab( "environment", "servlet", SCH.servletContext.serverInfo )
+            metaData.addToTab( "environment", "servlet", SCH.servletContext?.serverInfo )
 
             metaData.addToTab( "user", "remoteUser", request.remoteUser?:"(none)" )
             metaData.addToTab( "user", "userPrincipal", request.userPrincipal?:"(none)" )
