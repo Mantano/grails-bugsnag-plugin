@@ -50,7 +50,7 @@ dependencies {
     console "org.grails:grails-console"
     compile 'com.bugsnag:bugsnag:1.2.8'
     compile 'org.springframework:spring-test:4.2.5.RELEASE'
-    profile "org.grails.profiles:web-plugin:3.1.5"
+    profile "org.grails.profiles:web-plugin:$grailsVersion"
     provided "org.grails:grails-plugin-services"
     provided "org.grails:grails-plugin-domain-class"
     testCompile "org.grails:grails-plugin-testing"
