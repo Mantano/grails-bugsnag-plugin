@@ -31,16 +31,16 @@ class BugsnagGrailsPlugin {
     def loadAfter = ['controllers']
 
     def license = "APACHE"
-    def issueManagement = [ system: "GIT", url: "https://github.com/benlucchesi/grails-bugsnag-plugin" ]
-    def scm = [ url: "https://github.com/benlucchesi/grails-bugsnag-plugin" ]
+    def issueManagement = [system: "GIT", url: "https://github.com/benlucchesi/grails-bugsnag-plugin"]
+    def scm = [url: "https://github.com/benlucchesi/grails-bugsnag-plugin"]
 
     def doWithSpring = {
 
-        if ( !application.config.grails.plugin.bugsnag.enabled ) {
+        if (!application.config.grails.plugin.bugsnag.enabled) {
             return
         }
 
-        exceptionHandler(BugsnagExceptionResolver){ bean ->
+        exceptionHandler(BugsnagExceptionResolver) { bean ->
             bean.autowire = 'byName'
             exceptionMappings = ['java.lang.Exception': '/error']
         }

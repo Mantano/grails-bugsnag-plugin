@@ -1,11 +1,11 @@
 package com.granicus.grails.plugins.bugsnag
 
-import javax.servlet.http.HttpServletRequest
-import javax.servlet.http.HttpServletResponse
-
 import org.apache.log4j.Logger
 import org.grails.web.errors.GrailsExceptionResolver
 import org.springframework.web.servlet.ModelAndView
+
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 
 class BugsnagExceptionResolver extends GrailsExceptionResolver {
 
@@ -13,22 +13,21 @@ class BugsnagExceptionResolver extends GrailsExceptionResolver {
 
     final static Logger log = Logger.getLogger(this)
 
-    ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response,
-                                  handler, Exception ex) {
+    ModelAndView resolveException( HttpServletRequest request, HttpServletResponse response,
+                                   handler, Exception ex ) {
 
-        try{
-            if( bugsnagService ){
+        try {
+            if (bugsnagService) {
                 log.trace "calling notify on bugsnagService"
-                bugsnagService.notify( request, ex )
-            }
-            else{
+                bugsnagService.notify(request, ex)
+            } else {
                 log.error "bugsnagService is null"
             }
         }
-        catch( excp ){
+        catch (excp) {
             log.error "error calling bugsnagService.notify", excp
         }
 
-        super.resolveException(request,response,handler,ex)
+        super.resolveException(request, response, handler, ex)
     }
 }

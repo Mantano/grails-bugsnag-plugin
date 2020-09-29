@@ -14,11 +14,11 @@ buildscript {
 version "0.1"
 group "grails.bugsnag.plugin"
 
-apply plugin:"eclipse"
-apply plugin:"idea"
-apply plugin:"org.grails.grails-plugin"
-apply plugin:"org.grails.grails-plugin-publish"
-apply plugin:"org.grails.grails-gsp"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "org.grails.grails-plugin"
+apply plugin: "org.grails.grails-plugin-publish"
+apply plugin: "org.grails.grails-gsp"
 
 ext {
     grailsVersion = project.grailsVersion
@@ -72,7 +72,7 @@ grailsPublish {
     }
     title = "My Plugin"
     desc = "Full plugin description"
-    developers = [johndoe:"John Doe"]
+    developers = [johndoe: "John Doe"]
     portalUser = ""
-    portalPassword = ""    
+    portalPassword = ""
 }
