@@ -1,17 +1,17 @@
 package com.granicus.grails.plugins.bugsnag
 
-import org.apache.log4j.Logger
+import groovy.transform.CompileStatic
+import groovy.util.logging.Slf4j
 import org.grails.web.errors.GrailsExceptionResolver
 import org.springframework.web.servlet.ModelAndView
 
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
+@Slf4j
 class BugsnagExceptionResolver extends GrailsExceptionResolver {
 
     def bugsnagService
-
-    final static Logger log = Logger.getLogger(this)
 
     ModelAndView resolveException( HttpServletRequest request, HttpServletResponse response,
                                    handler, Exception ex ) {
