@@ -4,9 +4,10 @@ import com.bugsnag.Bugsnag
 import com.bugsnag.Report
 import grails.util.Environment
 import grails.web.context.ServletContextHolder as SCH
+import groovy.util.logging.Slf4j
 
 import javax.servlet.http.HttpServletRequest
-
+@Slf4j
 class BugsnagService {
 
     def grailsApplication
