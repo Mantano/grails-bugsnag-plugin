@@ -17,7 +17,6 @@ group "grails.bugsnag.plugin"
 apply plugin: "eclipse"
 apply plugin: "idea"
 apply plugin: "org.grails.grails-plugin"
-//apply plugin: "org.grails.grails-plugin-publish"
 apply plugin: "org.grails.grails-gsp"
 
 ext {
@@ -28,6 +27,7 @@ ext {
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+    mavenCentral()
 }
 
 dependencyManagement {
@@ -51,14 +51,14 @@ dependencies {
     implementation "org.grails.plugins:scaffolding"
     console "org.grails:grails-console"
     implementation 'com.bugsnag:bugsnag:3.6.4'
-    implementation 'org.springframework:spring-test:5.3.23'
+    //implementation 'org.springframework:spring-test:6.0.2'
     profile "org.grails.profiles:web-plugin:$grailsVersion"
     compileOnly "org.grails:grails-plugin-services"
     compileOnly "org.grails:grails-plugin-domain-class"
 //    testImplementation "org.grails:grails-plugin-testing"
 //    testImplementation "org.grails.plugins:geb"
     testRuntimeOnly 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0'
-    testRuntimeOnly 'net.sourceforge.htmlunit:htmlunit:2.66.0'
+    testRuntimeOnly 'net.sourceforge.htmlunit:htmlunit:2.67.0'
 }
 
 task wrapper(type: Wrapper) {
