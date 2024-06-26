@@ -17,7 +17,7 @@ group "grails.bugsnag.plugin"
 apply plugin: "eclipse"
 apply plugin: "idea"
 apply plugin: "org.grails.grails-plugin"
-apply plugin: "org.grails.grails-gsp"
+//apply plugin: "org.grails.grails-gsp"
 
 ext {
     grailsVersion = project.grailsVersion
