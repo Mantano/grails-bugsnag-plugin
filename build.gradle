@@ -30,13 +30,13 @@ repositories {
     mavenCentral()
 }
 
-dependencyManagement {
-    imports {
-        mavenBom "org.grails:grails-bom:$grailsVersion"
-    }
-    applyMavenExclusions false
-}
-
+//dependencyManagement {
+//    imports {
+//        mavenBom "org.grails:grails-bom:$grailsVersion"
+//        mavenBom "org.springframework.boot:spring-boot-dependencies:$springBootVersion"
+//    }
+//    applyMavenExclusions true
+//}
 dependencies {
 //    implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation 'org.slf4j:slf4j-api:1.7.36'
@@ -52,7 +52,7 @@ dependencies {
     console "org.grails:grails-console"
     implementation 'com.bugsnag:bugsnag:3.6.4'
     //implementation 'org.springframework:spring-test:6.0.2'
-    profile "org.grails.profiles:web-plugin:$grailsVersion"
+    profile "org.grails.profiles:web-plugin:$grailsWebProfileVersion"
     compileOnly "org.grails:grails-plugin-services"
     compileOnly "org.grails:grails-plugin-domain-class"
 //    testImplementation "org.grails:grails-plugin-testing"
