@@ -6,7 +6,7 @@ import grails.util.Environment
 import grails.web.context.ServletContextHolder as SCH
 import groovy.util.logging.Slf4j
 
-import javax.servlet.http.HttpServletRequest
+import jakarta.servlet.http.HttpServletRequest
 @Slf4j
 class BugsnagService {
 

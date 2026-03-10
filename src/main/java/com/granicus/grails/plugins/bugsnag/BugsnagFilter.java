@@ -3,7 +3,7 @@ NOTE: not currently implement. will consider implementing a file to catch 404's 
 
 package com.granicus.grails.plugins.bugsnag;
 
-import javax.servlet.FilterChain;
+import jakarta.servlet.FilterChain;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.util.Map;
@@ -14,10 +14,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.beans.BeansException;
 import java.io.IOException;
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
@@ -33,7 +33,7 @@ public class BugsnagFilter extends OncePerRequestFilter implements InitializingB
     }
 
     @Override
-    public void afterPropertiesSet() throws javax.servlet.ServletException
+    public void afterPropertiesSet() throws jakarta.servlet.ServletException
     {
       super.afterPropertiesSet();
 
