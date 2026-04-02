@@ -4,15 +4,15 @@ buildscript {
     }
     repositories {
         mavenLocal()
-        maven { url "https://repo.grails.org/grails/core" }
+        maven { url = "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath "org.apache.grails:grails-gradle-plugins:$grailsVersion"
     }
 }
 
-version "0.1"
-group "grails.bugsnag.plugin"
+version = "0.1"
+group = "grails.bugsnag.plugin"
 
 apply plugin: "eclipse"
 apply plugin: "idea"
@@ -26,7 +26,7 @@ ext {
 
 repositories {
     mavenLocal()
-    maven { url "https://repo.grails.org/grails/core" }
+    maven { url = "https://repo.grails.org/grails/core" }
     mavenCentral()
 }
 
